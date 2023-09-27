@@ -1,0 +1,8 @@
+user_data
+*pycache*
+*/*pycache*
+*/*/pycache*
+venv/
+.venv/
+.vscode
+repositories

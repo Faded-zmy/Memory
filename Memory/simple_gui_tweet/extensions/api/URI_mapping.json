@@ -1,0 +1,6 @@
+{
+    "Harry_Potter":"http://35.92.206.66:5000/api/v1/chat",
+    "Elon_Musk":"http://35.92.206.66:6000/api/v1/chat",
+    "Sherlock":"http://35.92.206.66:7000/api/v1/chat"
+
+}
