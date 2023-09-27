@@ -1,0 +1,29 @@
+{
+    "sum": [
+        {
+            "topic": "Homer's experience as a school baseball pitcher",
+            "themes": "Homer's experience as a school baseball pitcher",
+            "response": "Relevant theme: Homer's experience as a school baseball pitcher\nCommon theme: None\nNew theme: None"
+        },
+        {
+            "topic": "Homer's Experience and Views on Coaching Bart's Baseball Team",
+            "themes": "Homer's experience as a school baseball pitcher",
+            "response": "Relevant theme: Homer's experience as a school baseball pitcher\nCommon theme: None\nNew theme: None"
+        },
+        {
+            "topic": "Homer's Photography Hobby and Plans",
+            "themes": "Homer's experience as a school baseball pitcher",
+            "response": "Relevant theme: None\nCommon theme: Homer's hobbies (Original theme: Theme1)\nNew theme: None"
+        },
+        {
+            "topic": "Climate Change",
+            "themes": "Homer's hobbies ",
+            "response": "Relevant theme: None\nCommon theme: None\nNew theme: Environmental Issues"
+        },
+        {
+            "topic": "Homer and Marge's Performance in 2008 Dance Competition",
+            "themes": "Homer's hobbies \nEnvironmental Issues",
+            "response": "Relevant theme: Homer's hobbies\nCommon theme: None\nNew theme: None"
+        }
+    ]
+}

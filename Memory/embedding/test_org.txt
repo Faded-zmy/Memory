@@ -1,0 +1,19 @@
+Member1: Have any of you gone on a trip recently?
+Member2: Yes, I went to Japan last summer.
+Member3: How was it?
+Member2: It was amazing! The food was great and there were so many beautiful temples.
+Member1: I've been wanting to go there. What else did you do?
+Member2: We also went to the Ghibli Museum and went shopping in Harajuku.
+Member3: I've always wanted to visit Harajuku. Did you go to any other countries while you were there?
+Member2: No, we stayed in Japan the whole time. But I definitely want to go back and explore more.
+Question: What museum did Member2 visit in Japan?
+Answer: Ghibli Museum
+Member4: I've actually been to Japan too, but I went to Kyoto instead.
+Member2: How was it? I've been wanting to visit there as well.
+Member4: It was beautiful! We visited a lot of shrines and temples and even saw some geishas.
+Member1: That sounds amazing. Did you try any local food?
+Member4: Yes, we had some amazing sushi and also tried some matcha sweets.
+Member3: I've heard the bamboo forest in Kyoto is really pretty. Did you get a chance to visit?
+Member4: Yes, we went early in the morning and it was really peaceful. Highly recommend it!
+Question: What is a popular sweet in Kyoto?
+Answer: Matcha sweets

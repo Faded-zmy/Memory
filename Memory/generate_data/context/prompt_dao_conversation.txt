@@ -1,0 +1,28 @@
+You are asked to generate a set of 3 diverse long conversations. The conversation is between some members.
+
+Requirement:
+1) Each conversation is about 20 to 30 more rounds between members. 
+2) Try not to repeat the topic for each conversation.
+3) After some rounds of dialogue, Ask a question that the answer to the question is in the conversation above and give the answer.
+4) The output should be a conversation in the format of:
+topic: xxx
+Member1: xxx
+Member2: xxx
+Member3: xxx
+Member1: xxx
+Question: xxx
+Answer: xxx
+Member4: xxx
+Member2: xxx
+Member3: xxx
+Member1: xxx
+Member2: xxx
+Question: xxx
+Answer: xxx
+
+Make sure the output is over 12 chatting rounds.
+
+List of 3 conversations:
+
+1. 
+Setting:

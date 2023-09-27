@@ -1,0 +1,42 @@
+You are asked to provide 2-3 possible contexts and the answer according to the contexts for the given question.
+The question is: "Please Place the question there"
+The conversation above the question is: "Please place conversation above the question there"
+
+Requirement:
+1) The question is raised after a multi round long conversation with multiple participants include an ai assistance Drucker about a certain subject.
+2) The question and the conversation above the question are given.
+3) Please give the subject, atmosphere, abstract and opinion by each member related to the problem as the context.
+4) There is a 15% probability that one of the contexts has an unrelated subject to the problem or having a low correlation. 
+5) Merging the opinions if they are close enough, for example if A and B's opinion are close, only \"A/B: xxx\" is needed.
+6) Provide two forms of answer, one is to provide answer based on the relevant context and the correlation coefficient between the answer and the question (between 0 and 1), and the other is to integrate relevant information from all contexts to provide a comprehensive answer.
+7) The output should be in the format of:
+Context 1:
+Subject: xxx
+Atmosphere: xxx
+Abstract: xxx
+Opinion:
+A: xxx
+B: xxx
+C/D: xxx
+...
+Answer from Context 1: xxx
+correlation coefficient:xxx
+
+Context 2:
+Subject: xxx
+Atmosphere: xxx
+Abstract: xxx
+Opinion:
+A/D/E: xxx
+B: xxx
+C/F: xxx
+...
+Answer from Context 2: xxx
+correlation coefficient:xxx
+
+...
+
+
+Comprehensive answer: xxx
+
+

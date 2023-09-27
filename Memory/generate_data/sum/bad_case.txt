@@ -1,0 +1,8 @@
+{
+            "topic": "Preference between fiction and non-fiction books",
+            "themes": [
+                "Artificial Intelligence",
+                "Environmental Issues"
+            ],
+            "response": "Class: Discussion\nRelevant theme: None\nCommon theme: None\nNew theme: Literary Preferences"
+        },

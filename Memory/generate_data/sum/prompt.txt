@@ -1,0 +1,278 @@
+## 群聊discussion summarize
+The following conversation is a group conversation. Please summarize the opinions of all parties.
+Requirement:
+1. Provide a summary and a topic of the discussion. Give everyone's opinion on the topic.
+2. Provide a summary of the discussion, topic.
+3. Provide the outcome of this discussion.
+
+The output format is as follows:
+Topic: xxx
+Summary: xxx
+Opinion:
+    A: xxx
+    B: xxx
+    ...
+Outcome: xxx
+
+The conversation is as follows:
+[Start of conversation]
+B: Well this is the uh final detailed design meeting ,
+B: Um we're gonna discuss the look and feel design , the user interface design , and we're gonna evaluate the product ,
+B: And the end result of this meeting has to be a decision on the details of this remote control ,
+B: um and then I'm gonna have to specify the final design in the final report .
+B: we said we were gonna have a snowman shaped remote control with no L_C_D_ display , no need for talk-back ,
+B: it was hopefully gonna be kinetic power and battery uh with rubber buttons ,
+B: maybe backlighting the buttons with some internal L_E_D_s to shine through the casing ,
+B: um hopefully a jog-dial ,
+B: and incorporating the slogan somewhere as well .
+D: Um , there are a few changes we've made .
+D: Um , well look at the expense sheet , and uh it turned to be quite a lot expensive to have open up and have lots of buttons and stuff inside ,
+D: this is gonna be an L_C_D_ screen , um just a a very very basic one ,
+D: very small um with access to the menu through the the scroll wheel and uh confirm,
+D: Uh , apart from that , it's just pretty much the same as we discussed last time .
+A: the advanced functions are still hidden from you , but they're hidden in the sense that um they're not in use .
+A: Um they're in the L_C_D_ panel and the jog-dial ?
+A: The L_C_D_ panel just displays um functionally what you're doing .
+A: If you're using an advanced function right , like um c brightness , contrast , whatever , it will just say <disfmarker>,
+A: It might even be one , a bit more complex L_C_D_ panel with pictures like maybe the sun or the , you know , the the symbols of the various functions .
+A: That's a number pad .
+B: Where are we gonna have the slogan ?
+D: just like right inside there .
+D: <vocalsound> Well <vocalsound> we want the other buttons to be big enough to push easily with a finger,
+D: so we reckon maybe that'll be about the same size as the palm of your hand . <gap>,
+B: So we're talking about ten centimetres .,
+D: We're gonna have again the the sort of the foggy um yellow from last time that lit up when you pushed the button .,
+C: uh I'm just gonna bring up the idea of colours .,
+D: this button um , because it's red it's sort of very prominent , we're gonna use it as uh <disfmarker> it can be the power button,
+D: if you hold it for maybe two seconds it'll send a stand-by signal .,
+D: Um apart from that it's gonna be used as a confirm button for the L_C_D_ screen,
+A: Oh we've discussed how h high it is , but how wide is it ? <vocalsound>,
+A: be about th three and a half .,
+B: what else can you do ?,
+D: Um you can skip straight to a channel using these buttons .,
+D: but um because we've got the the L_C_D_ and the jog-dial we just thought we'd um use that as the volume .,
+B: And what else do you do with the jog-dial ?,
+D: Um you can use it for um more advanced functions like contrast , colour and <disfmarker>,
+A: Um a lot of these things will have to be um free and open for users to define them .,
+A: Audio , we have like your basic y your base , your mid-range , your high range .,
+A: left-right balance ,,
+A: um maybe even pre-programmed sound modes ,,
+B: We can now have a little look at the the Excel sheet and price listing ,,
+B:and see if we need to,
+B:um if we need to rethink anything at all .,
+B:for this first part here power-wise , have we got battery ?,
+B:Do we have kinetic as well ?,
+A: No .,
+B:And that's because of cost restraints is it ?,
+A: Yep .,
+A: We need an advanced chip I think , yep .,
+B:So we want double-curved ?,
+A: I think we're gonna have to skip the rubber .,
+B:um and we wanted special colours didn't we ?,
+A: For the case itself , one colour . It's one special colour .,
+A: We've got push buttons as well .,
+B:So we're w w quite far over .,
+A: Okay let's just be safe and put like say four buttons for that one .,
+B:something's gonna have to go .,
+B:Um we're at sixteen point eight and <disfmarker>,
+[End of conversation]
+    
+
+
+
+
+## 把“讨论”话题分为几个category
+Classify the topic "{topic}".
+Requirement:
+1. If the topic is about personal information or personal experience description or interpersonal relationship, fill in "Class" with "Personal Information", else fill in "Class" with "Discussion".
+2. If the topic is in "Discussion" class, classify it into one of the following Categories.
+
+Categories:
+    ['Business', 'Entertainment', 'Politics', 'Sports', 'World', 'LifeStyle', 'ScienceAndTechnology', 'Education', 'Military', 'RealEstate', 'Society', 'Health', ]
+
+Output format:
+    Class: xxx
+    Category: xxx
+
+['Business', 'Entertainment', 'Politics', 'Sports', 'World', 'LifeStyle', 'ScienceAndTechnology', 'Education', 'Military', 'RealEstate', 'Society', 'Health', ]
+
+### 把主题分成个人信息和讨论
+Classify the following topics into the most relevant theme.
+    Requirement:
+        1. If the topic is about personal information or personal experience description or interpersonal relationship, fill in "Class" with "Personal Information", else fill in "Class" with "Discussion".
+        2. If the topic is in "Discussion" class,give the broad theme or category the topic falls into, such as politics, business, technology, health, sports, entertainment, etc..
+        3. If a certain key's information is not mentioned, fill in it with "None".
+
+    Topic:
+    {topic}
+
+    Output format:
+        Class: xxx
+        Theme/Category: xxx
+
+
+### 添加新的话题到主题
+Classify the following topics into the most relevant theme.
+    Requirement:
+        1. If the topic is related to one of the following themes, write the theme in the "Relevant theme" part.
+        2. Else if the topic is related to a certain theme but not included in it, please give the common theme of the topic and the theme in "Common theme".
+        3. Else the topic has no relevance to any of the following Themes, provide a new theme to include it and write it in "New theme".
+        4. If a certain key's information is not mentioned, fill in it with "None".
+        5. The "New theme" must be unrelated and not present in the following Themes.
+        6. Three parts cannot be "None" at the same time
+
+    Topic:
+    {topic}
+
+    Themes:
+    {themes_str}
+
+    Output format:
+        Relevant theme: xxx
+        Common theme: xxx (Original theme: Theme2)
+        New theme: xxx
+
+    For example:
+        Topic: Homer's experience in theater productions
+        Themes:
+            Theme1: Homer's hobbies
+            Theme2: Homer's relationship
+            Theme12: Homer's experience as a school baseball pitcher
+
+
+        Output:
+        Relevant theme: None
+        Common theme: Homer's experience (Original theme: Theme12)
+        New theme: None
+
+        
+
+### 划分话题到主题
+Here are some conversation topics. Classify these topics into different themes.
+Requirement:
+1. Give the theme that topics in it mainly about.
+2. Relevant topics must be under the same theme
+3. A topic can only be classified into one theme. 
+
+Topics:
+1. Artificial Intelligence vs Sports Impact
+2. Latest Fashion Trends and Role of Technology in Education
+3. Role of Philanthropy, Technology and AI in Addressing Social Injustices
+4. Bill's Involvement in Politics
+5. Bill Gates' work and hobbies
+6. Impact of technology and AI on education
+7. Investing in the Equestrian Performance Tracking Technology
+8. Artificial Intelligence
+9. Artificial Intelligence in Education and Philanthropy
+10. Innovation and Artificial Intelligence
+11. Foundation work, AI Project, Experience at Microsoft, Playing Bridge
+12. Product Design and Market Strategy
+13. Artificial Intelligence and its potential uses
+14. Balancing Technology Developments and Philanthropy
+15. Bill's relationship with his father and its influence on his career
+16. The influence of Bill's mother on his life and career
+17. Bill's divorce from Melinda Gates and their shared work at the Bill & Melinda Gates Foundation
+18. Jennifer's Horse Riding and Bill's Inspirations
+19. Discussion on Family Dynamics and Future of Technology
+20. Mr. Gate's relationship with his daughter, Phoebe, and his parenting advice
+
+The output format is as follows:
+Similar Topics:
+Theme1: xxx
+    topics in it: 3,7
+Theme2: xxx
+
+
+
+### 英文sum单人多轮对话
+The following is a conversation between User_A and User_B. Please help to extract information and summarize opinion on both sides from the following conversation.
+    Requirement:
+    1. Divide the information into two parts, a description of people and opinions on a topic.
+    2. Summarize the conversation into one topic and the opinion of both sides. Give both sides's way of talking using a concise sentence or some words.
+    3. For the description of people, construct an information card of both sides.
+    4. "Todo" is what people is going to do, "Todo_Time" is corresponding time.
+    5. If a certain key's information is not mentioned, fill in it with "None".
+
+    The structure of the information card is as follows:
+    {"basic_information": {"Name": xxx, "Gender": xxx, "Date_of_Birth": xxx, "Place_of_Birth": xxx, "Race": xxx, "Nationality": xxx}, "background": {"Educational_Background": xxx, "Occupation": xxx, "Position": xxx, "Achievement": xxx}, "others": {"Personality": xxx, "Hobbies": xxx, "Good_at": xxx, "Not_good_at": xxx, "Topics_of_interest": xxx, "Topics_of_disinterest": xxx, "People_They_Admire": xxx, "People_They_Dislike": xxx, "Todo": xxx, "Todo_Time": xxx}}}
+
+    The output format is as follows:
+    User_A's information card: xxx
+
+    User_B's information card: xxx
+
+    Discussions:
+    {"Topic": xxx,
+    "User_A's_opinion": xxx,
+    "User_A's_way_of_talking": xxx,
+    "User_B's_opinion": xxx,
+    "User_B's_way_of_talking": xxx}
+
+    The conversation is as follows:
+
+
+
+### 有讨论成就的prompt:
+    The following is a conversation between User_A and User_B. Please help to extract information and summarize opinion on both sides from the following conversation.
+    Requirement:
+    1. Divide the information into two parts, a description of people and opinions on a topic.
+    2. Summarize the conversation into one topic and the opinion of both sides. Give both sides's  way of talking and did he achieve a achievement such as convincing someone, getting a message when discuss the topic using a concise sentence or some wordsl.
+    3. For the description of people, construct an information card of both sides.
+    4. "Todo" is what people is going to do, "Todo_Time" is corresponding time.
+    5. If a certain key's information is not mentioned, fill in it with "None".
+
+    The structure of the information card is as follows:
+    {"basic_information": {"Name": xxx, "Gender": xxx, "Date_of_Birth": xxx, "Place_of_Birth": xxx, "Race": xxx, "Nationality": xxx}, "background": {"Educational_Background": xxx, "Occupation": xxx, "Position": xxx, "Achievement": xxx}, "others": {"Personality": xxx, "Hobbies": xxx, "Good_at": xxx, "Not_good_at": xxx, "Topics_of_interest": xxx, "Topics_of_disinterest": xxx, "People_They_Admire": xxx, "People_They_Dislike": xxx, "Todo": xxx, "Todo_Time": xxx}}}
+
+    The output format is as follows:
+    User_A's information card: xxx
+
+    User_B's information card: xxx
+
+    Discussions:
+    {"Topic": xxx,
+    "User_A's_opinion": xxx,
+    "User_A's_way_of_talking": xxx,
+    "User_A's_ achievement":xxx,
+    "User_B's_opinion": xxx,
+    "User_B's_way_of_talking": xxx,
+    "User_B's_ achievement":xxx}
+
+    The conversation is as follows:
+
+
+### 中文sum单人多轮对话
+
+以下是User_A和User_B之间的对话。请帮忙提取信息，并总结双方对一个话题的观点。
+
+要求：
+1. 将信息分为两部分，即关于人物的描述和对话中的观点。
+2. 将对话总结为一个话题和双方的观点。给出双方的谈话方式，并判断他们是否达到了某种成就，例如说服他人、传递信息等，使用简洁的句子或几个词描述。
+3. 对于人物的描述，请构建双方的信息卡。
+4. "Todo"表示人们将要做的事情，"Todo_Time"表示相应的时间。
+5. 如果某个关键信息没有提到，请填写为"None"。
+
+信息卡的结构如下：
+{"基础信息": {"姓名": xxx, "性别": xxx, "出生日期": xxx, "出生地": xxx, "民族": xxx, "国家": xxx}, "背景": {"教育背景": xxx, "职业": xxx, "职级": xxx, "成就": xxx}, "其他": {"性格": xxx, "爱好": xxx, "擅长": xxx, "不擅长": xxx, "感兴趣的话题": xxx, "不感兴趣的话题": xxx, "欣赏的人": xxx, "不喜欢的人": xxx, "Todo": xxx, "Todo_Time": xxx}}}
+
+对话如下：
+
+
+输出格式如下：
+
+对话翻译：xxx
+
+User_A的信息卡: xxx
+
+User_B的信息卡: xxx
+
+讨论：
+{"主题": xxx,
+"摘要": xxx,
+"User_A的观点": xxx,
+"User_A的说话方式": xxx,
+"User_A的成就":xxx,
+"User_B的观点": xxx,
+"User_B的说话方式": xxx,
+"User_B's_achievement":xxx}
+
